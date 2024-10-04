@@ -1042,8 +1042,8 @@ def bez(sc,cpl,ec):
         t=0
         w=0
         for j in range(len(co)-i):
-            t+=co[j][0]*pascal(len(co)-i-1,j)*pow(-1,j+1+i)
-            w+=co[j][1]*pascal(len(co)-i-1,j)*pow(-1,j+1+i)
+            t+=co[j].x*pascal(len(co)-i-1,j)*pow(-1,j+1+i)
+            w+=co[j].y*pascal(len(co)-i-1,j)*pow(-1,j+1+i)
         pol[0].append(pascal(len(co)-1,i)*t*pow(-1,len(co)))
         pol[1].append(pascal(len(co)-1,i)*w*pow(-1,len(co)))
     return para(full([fullNode([0,poly(pol[0]),0,False])]),full([fullNode([0,poly(pol[1]),0,False])]))
